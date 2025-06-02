@@ -1,90 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Slider</title>
-
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-        }
-
-        header {
-            background-image: url(assets/2.jpg);
-            width: 100%;
-            height: 100vh;
-            background-repeat: no-repeat;
-            background-size: cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-
-        h1 {
-            color: white;
-            font-size: 70px;
-            font-family: sans-serif;
-        }
-        p{
-            color: white;
-            font-size: 25px;
-            font-weight: bold;
-            text-align: center;
-        }
-        button{
-            background: none;
-            border: none;
-        }
-        button > img{
-            width: 60px;
-            height: 60px;
-            cursor: pointer;
-        }
-        .para{
-            width: 100%;
-            display: flex;
-            justify-content: space-around;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <title>Image Slider</title>
 </head>
-
 <body>
-    <header id="header">
-        <h1>
-            WELCOME TO OUR WEBSITE
-        </h1>
-        <div class="para">
-            <button onclick="backword()" id="backword"><img src="assets/backword.png" alt=""></button>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis odio illum <br> quo adipisci mollitia
-            explicabo dicta pariatur molestias porro quod! Lorem ipsum,  <br>  dolor sit amet consecteturadipisicing elit.
-            Aperiam perspiciatis harum quaerat fugit <br> molestiae sit eaque ea  sequi libero officia quod nesciunt, et fuga
-            blanditiis doloremque. <br> Deserunt architecto iure qui.</p>
-            <button onclick="forword()"  id="forword"><img src="assets/forword.png" alt=""></button>
-        </div>
-    </header>
+  <div class="head">
+    <div class="allHeadings">
+      <h2>Coding</h2>
+      <h2>GYM</h2>
+      <h2>Sleep</h2>
+    </div>
+  </div>
 
+ <div class="slider">
+    <div class="allSlides">
+      <img src="assets/coding.jpg" class="slideImg" />
+      <img src="assets/gym.jpg" class="slideImg" />
+      <img src="assets/sleep.jpg" class="slideImg" />
+      <img style="margin-left: 15%;" src="assets/repeat.png" class="slideImg" />
+    </div>
+    
+    <button class="prev">&#10094;</button>
+    <button class="next">&#10095;</button>
+  </div>
 
-    <script>
-
-function backword(){
-
-    let bgArr = ["assets/1.jpg" , "assets/2.jpg" , "assets/3.jpg"]
-    let randomBg = bgArr[Math.floor(Math.random() * bgArr.length)]
-document.getElementById("header").style.backgroundImage = `url(${randomBg})`
-     
-     
-}
-function forword(){
-    let bgArr = ["assets/1.jpg" , "assets/2.jpg" , "assets/3.jpg"]
-    let randomBg = bgArr[Math.floor(Math.random() * bgArr.length)]
-document.getElementById("header").style.backgroundImage = `url(${randomBg})`
-}
-
-    </script>
+  <script src="script.js"></script>
 </body>
-
 </html>
